@@ -1,0 +1,1044 @@
+ Udemy Cred:
+phani.dasireddy@gmail.com
+pswd: Cr8@012022jan 
+
+phani
+502774302
+Cr8@012023jan
+
+Mamatha
+503048252
+Hima@2371s
+
+Krishna
+503140132
+Cr8@0123jun
+
+suresh
+503048689
+Cr8@04feb
+==================================================================================================================================
+Shift roster  user login
+User Name: SHIFTFAC3
+Passsword: Shift@03
+==================================================================================================================================
+Github settings --> developer settings--> personal access token-->tokens(classic) at top click on generate new token 
+==================================================================================================================================
+
+GEPRB0138155 ---- lucas zeppelin issue 
+
+GEPRB0138298--- shoreline cdc prod issue.
+
+med-av-daas-preprod-ldp-cicd/emr/bootstrap/lambda-code/ldp_dashboard.zip
+=============================================================================================================
+
+Commands to install all python packages when missing 
+
+cd /home/hadoop
+
+aws s3 cp s3://med-av-daas-prod-datasci-cicd/emr/bootstrap/local.3.7.requirements_grv.txt .
+
+pip-3.7 install -r local.3.7.requirements_grv.txt
+
+===================================================================================================================
+Biweekly metrics box link
+
+https://ge.ent.box.com/folder/134182677805
+
+===================================================================================================================
+session timeout
+
+vi /etc/profile
+
+
+comment last line
+
+newrelic 
+cat /etc/newrelic-infra.yml
+b43f6df4800f18cb897ec9dc00b547aab2b03db8
+ps -ef | grep presto
+==================================================================================================================================
+
+Prodaps commands:
+==================================================================================================================================
+
+import prodaps
+import prodaps.mixture.learn
+import prodaps.mixture.infer
+import prodaps.probgm
+print(prodaps.version)
+import prodaps.probgm
+import prodaps._version as pv
+print(pv.build_number)
+print(pv.build_id)
+
+==================================================================================================================================
+
+gossamer setup KB ---- GEKB2024867
+
+AV-HIVE-Incident-Task
+
+AVI_HIVE_SR_SRTASK
+
+AVI_Hive_Change_request_Query
+
+
+Next Physical week 
+24/10  06/11
+
+
+sample IDEA ticket ---- GEIDEA0067470
+
+cdc --- change data capture
+
+fallocate -l 5G test1.img ---- to increase disk space manually
+
+dd if=/dev/zero of=/dev/null bs=2000M & ---- to increase memory 
+
+yes > /dev/null & ---- cpu increasing
+
+killall yes   ,   kill -9 process ID
+
+
+
+To clear the cache memory
+
+echo 3 > /proc/sys/vm/drop_caches 
+
+
+==================================================================================================================================
+
+[talendav@ip-10-230-246-97 Talend-JobServer-7.3.1]$ pwd
+/opt/Talend/Talend-JobServer-7.3.1
+[talendav@ip-10-230-246-97 Talend-JobServer-7.3.1]$
+
+start_jobserver.sh
+stop_jobserver.sh
+
+==================================================================================================================================
+
+ssh -N -L 8088:10.230.246.178:8088 lh288832@10.230.246.178   ------yarn
+
+ssh -N -L 8888:10.231.101.230:8888 lh288832@10.231.101.230	--- hue
+
+ssh -N -L 8890:10.231.101.230:8890 lh288832@10.231.101.230      --- zeppelin
+
+
+ssh -N -L 80:10.231.100.187:80 lh288832@10.231.100.187 ---- ALB validation 
+
+
+
+ssh -N -L 20888:10.231.100.89:20888 lh288832@10.231.100.89 ---- spark
+
+----- For Current running jobs full details
+
+------localhost:20888/proxy/<application-id>    ---path
+
+ssh -N -L 20888:10.230.246.216:20888 lh288832@10.230.246.216 
+
+ 
+spark-shell --executor-memory 40g --num-executors 20 --executor-cores 5
+===================================================================================================================================
+
+Command to get nix users:
+
+getent netgroup CA_AWSENTC_NC_SHRLINE_EMR_GV_GLOBAL_P
+
+
+
+==================================================================================================================================
+                      						Cluster check report....:
+===============================================================================================
+Date=`date +"%d%m%y_%H%M%S"`
+Validation_Time=$(date -d "+ 10 minutes" +'%M %H %d %m')
+aws s3 cp s3://med-av-daas-prod-ct7-cicd/emr/bootstrap/cluster_validation_report.sh /home/hadoop/
+aws s3 cp s3://med-av-daas-prod-ct7-cicd/emr/bootstrap/cluster_check_list.sh /home/hadoop/
+chmod 777 /home/hadoop/cluster_check_list.sh /home/hadoop/cluster_validation_report.sh
+crontab -l | { cat; echo "$Validation_Time * /home/hadoop/cluster_validation_report.sh >> /home/hadoop/cluster_validation_report.log" ; } | crontab -
+==================================================================================================================================
+								ALB Mapping 
+==========================================================================================================================================================
+DS ALB
+
+ 
+
+systems manager ---> parameters store ---> search datasci/emr/alb/master-instance-id (edit and paste:- new cluster MASTER instance id) save changes.
+cloudformation --->  stacks ---> search datasci-v1-alb-targetGroups-stage --- delete the stack 
+code pipeline --->   search datasci-v1-alb-targetGroups-cicd-pipeline open that and click on release change 
+
+ 
+
+ 
+
+ds  link : https://datascistg.av.ge.com/service.html/
+=================================================================================================================================
+AD account validation link 
+
+https://kb.ds.ge.com/compliance/
+
+=================================================================================================================================
+AMI Updation:
+
+Go to systems manager --> parameter store --> search with (/datasci/cicd/graviton/latest-amazon2) open and we have to delete the parameter and should create the new parameter with new ami
+
+=================================================================================================================================
+pip3 install packagename==version number
+
+==================================================================================================================================
+		console login links
+==================================================================================================================================
+http://sc.ge.com/*AWSENtLoginMFA
+
+https://fssfed.ge.com/fss/idp/startSSO.ping?PartnerSpId=urn:amazon:webservices:mfa
+
+http://sc.ge.com/*AWSGovLoginMFA
+==================================================================================================================================
+
+==================================================================================================================================
+			Webmail links
+==================================================================================================================================
+https://webmail.ge.com/
+
+https://webmail.ge.com/owa/#path=/mail/AAMkADg4OGYwNjM5LTUzODAtNDI1Ni1iZGY4LTE4Y2NhNDYyNWUwZQAuAAAAAAADCiFnR5AxS5Z78ZLRCVZoAQBJk3xz2%2FvqSajpb1Wc3yBAAAAnPKLVAAA%3D
+
+==================================================================================================================================
+serivce now
+ https://geit.service-now.com/
+
+service now QA link
+https://geitqa.service-now.com/
+==================================================================================================================================
+Box values link
+  https://ge.ent.box.com/folder/147731202679?s=asgagiexkdrzpbhbjottmq5pgsbmm8kr
+cluster build and validations 
+https://ge.ent.box.com/folder/123177390791
+==================================================================================================================================
+copy from s3 to s3
+aws s3 cp s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/shiro.ini s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/shiro.ini_bkp170124
+
+aws s3 cp s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/zeppelin1.jceks s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/zeppelin1.jceks_bkp170124
+
+aws s3 cp s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/hue.ini s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/hue.ini_bkp170124
+
+
+list files from s3
+aws s3 ls s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/
+
+copy from local to s3
+aws s3 cp /etc/hue/conf/hue.ini s3://med-av-daas-preprod-ldp-cicd/emr/bootstrap/hue.ini_bkp170124
+================================================================================================================================
+ldp team
+
+9502202257 -->Venkatesh Chellaboina 
+7075822853 --> Ramakrishna Bontu
+
+
+"@AVIATION DISE ALM DevOps <DISEALMDevOps@ge.com>"
+
+RamaKrishna.Bontu@ge.com
+Subhag.Kumar@ge.com
+Riya.Saha1@ge.com
+Chellaboyina, Venketesh
+
+==================================================================================================================================
+Change Request
+Shoreline Cr no: GECHG1600361--- non prod  
+                 GECHG1607763-- prod
+
+
+EMR Non prod Ticket: GECHG1474919
+
+EMR prod ticket: GECHG1480815
+==================================================================================================================================
+Shoreline CI
+av-hvr-nec
+
+av-hvr-nec-prod
+av-hvr-nec-nonprod
+
+Stormline CI
+talend-av-prod
+talend-av-nonprod
+
+@AVIATION DISE HVR Platform
+
+
+
+FYI: New Shoreline DL: @AEROSPACE DOS Shoreline Ops
+
+CI: 
+
+AVI-DOS-Shoreline-Global-dev
+AVI-DOS-Shoreline-US-dev
+AVI-DOS-Shoreline-Global-prod
+AVI-DOS-Shoreline-US-prod
+
+Details of the Shoreline CI’s and environment details.
+
+Non-Prod: AVI-DOS-Shoreline-Global-dev
+Prod: AVI-DOS-Shoreline-Global-prod
+
+Assignment Group for EMR Platform Team: @Aerospace DBA NONEC Hive
+
+
+
+CI for ds and CT7
+
+AVI-datasci
+AVI-datasci-qa
+AVI-datasci-prod
+
+avi-datasci-prod
+
+LPD CI
+av-ldp-emr-prod
+av-ldp-emr-stage
+av-ldp-emr
+
+
+DS PROD:          APP_GE001000000_EMR_DSPROD
+DS NonProd:    APP_GE001000000_EMR_DSNONPROD
+
+==================================================================================================================================
+https://fssfed.ge.com/fss/idp/startSSO.ping?PartnerSpId=urn:amazon:webservices:mfa
+
+==================================================================================================================================
+
+ge box credentials
+   503048252
+   Cr8@01april
+
+uid : lh288832 
+Password : Use SSO password 
+
+
+==============================================================================================
+		Disk space commands:
+==========================================================
+dh -h
+df -h /mnt
+
+cd /
+
+du -skh ./* | grep G
+
+cd ./home
+==================================================================================================================================
+
+yarn jobs running check:
+http://localhost:8088/cluster/apps/RUNNING
+==================================================================================================================================
+
+mail:
+aviation_dba_x1_alerts@ge.com
+aviation_emr_platform@ge.com
+
+@AVIATION DISE ALM DevOps <DISEALMDevOps@ge.com>
+
+Shoreline Dl
+@AVIATION CDOO Shoreline dl
+@AVIATION Data Lake Ingestion Ops
+
+"@AVIATION Data Lake Ingestion Ops" <aviation.data.lake.ingestion.ops@ge.com>
+
+
+Process_Excellence <process_excellence@wisseninfotech.com>
+
+
+
+total nix and console level access raising process link:
+https://devcloud.swcoe.ge.com/devspace/pages/viewpage.action?spaceKey=LXAZA&title=Big+Data+%7C+Access+Request+to+AWS-EMR+Data+Science+CT7+Non-Prod+Cluster
+
+
+==============================================================================================================================
+						Cpu Testing Commands
+================================================================================================
+sudo -i
+
+yes > /dev/null &    ---- to run an appilcation to increase the load 
+
+sar 1        ---- to check cpu percentage 
+
+killall yes   ----- to kill all running applications 
+
+
+===========================================================================================
+
+
+
+yarn application -kill <appid>
+
+
+===================================================================================================
+			cluster_validation_report check
+==================================================================================================
+Sudo -i
+
+cd /home/hadoop/
+
+ls -ltrh
+
+sh cluster_validation_report.sh
+
+=====================================================================================================
+
+functional sso
+
+nixuser--- lg835292sd
+
+fsso - 502835292
+
+
+Supportldp123a
+
+==================================================================================================
+								Splunk agent updates on instance please use the below commands
+====================================================================
+
+cd /opt/splunkforwarder/etc/apps/deployment_client/default/
+
+cat deployment.conf
+
+cd /opt/splunkforwarder/etc/apps/deployment_client/default/local
+
+cat server.conf
+
+cd /opt/splunkforwarder/etc/system/local/
+
+cat inputs.conf
+
+==================================================================================================
+
+
+
+DL's 
+
+@	
+@Aviation_Wissen_EMR_Platform_Team
+@AVIATION LDP Runtime Analytics Notifications
+@AVIATION DISE ALM DevOps
+@AVIATION WissenLDPAnalytics
+@AVIATION EMR PLATFORM <aviation_emr_platform@ge.com>    ----------- new DL
+@AVIATION DBA LDP ALERTS
+@Aviation DBA NONEC Hive
+
+
+
+
+
+===========================================================================Shoreline====================================================================================================================================================================================================================================================
+
+https://sso.connect.pingidentity.com/sso/sp/initsso?saasid=d4c6830e-af0b-48a6-b846-d28ffc54d4a3&idpid=ge
+
+C:\shoreline\govglobal>gossamer3 configure
+? Config name gov-mfa
+? Please choose a provider: Ping
+? Please choose an MFA: Auto
+? AWS Profile gov-mfa
+? URL https://fssfed.ge.com/fss
+? AWS URN urn:amazon:webservices:govcloudmfa
+? Username 503288832
+? Password ************
+? Confirm ************
+
+
+
+
+
+=========================================================  windows CMD =========================================================
+cd C:\Users\005303\govglobal
+set http_proxy=http://PITC-Zscaler-Americas-Alpharetta3PR.proxy.corporate.ge.com:80
+set https_proxy=http://PITC-Zscaler-Americas-Alpharetta3PR.proxy.corporate.ge.com:80
+set no_proxy=.ge.com
+gossamer3 login -a gov-mfa --region us-gov-east-1
+gossamer3 login -a gov-mfa --region us-gov-east-1 --force
+
+================================================================================================================================
+
+
+
+
+===============================================================================              Gitbash ===========================================================================
+
+cd /c/Users/005303/govglobal
+export http_proxy=http://PITC-Zscaler-Americas-Alpharetta3PR.proxy.corporate.ge.com:80
+export https_proxy=http://PITC-Zscaler-Americas-Alpharetta3PR.proxy.corporate.ge.com:80
+export no_proxy=.ge.com
+export AWS_CA_BUNDLE=C:/Users/005303/govglobal/GE_External_Root_CA_2_1.crt
+echo $AWS_CA_BUNDLE
+
+
+
+Updated query to check the backlog count
+========================================
+
+prod
+=================
+#For Inc dynamodb Table(CDC)
+
+aws dynamodb query --profile gov-mfa --region us-gov-east-1 --table-name shoreline-main-dynamo-inc-prod --index-name shoreline-inc-running-gsi-prod --key-condition-expression "op_status = :status" --expression-attribute-values '{":status":{"S":"ready"}}' --select COUNT
+
+
+For Ref dynamodb Table(Truncateload)
+
+aws dynamodb query --profile gov-mfa --region us-gov-east-1 --table-name shoreline-main-dynamo-ref-prod --index-name shoreline-ref-running-gsi-prod --key-condition-expression "op_status = :status" --expression-attribute-values '{":status":{"S":"ready"}}' --select COUNT
+=================
+DEV
+=================
+#For Inc dynamodb Table(CDC)
+
+aws dynamodb query --profile gov-mfa --region us-gov-east-1 --table-name shoreline-main-dynamo-inc-dev --index-name shoreline-inc-running-gsi-dev --key-condition-expression "op_status = :status" --expression-attribute-values '{":status":{"S":"ready"}}' --select COUNT
+
+For Ref dynamodb Table(Truncateload)
+
+aws dynamodb query --profile gov-mfa --region us-gov-east-1 --table-name shoreline-main-dynamo-ref-dev --index-name shoreline-ref-running-gsi-dev --key-condition-expression "op_status = :status" --expression-attribute-values '{":status":{"S":"ready"}}' --select COUNT
+
+
+==============================================================================================================================================================================================================================================================================================================================================
+cluster build commands
+
+•  sh govglobal-dev-deploy.sh gov-mfa
+
+•  sh govglobal-prod-deploy.sh gov-mfa
+
+============================================================================
+
+
+cluster validations 
+
+
+sym link
+
+
+
+/usr/lib/spark/jars/emrfs.jar
+
+
+
+======
+LDPPROD
+
+
+
+GEAVR - No
+HUE - automated
+* s -- automated.
+/tmp/hadoop
+fs log directory
+
+
+Zeppelin interpreters
+%spark
+%livy.sql
+%spark.sql
+
+
+
+
+
+CT7
+
+
+
+GEAVR - No
+HUE - Automated
+*'s --- automated.
+fs log directory-- automated
+
+git –-version
+
+cat /etc/cron.allow
+
+Zeppelin interpreters--- 503144469_test
+%spark.sql
+%ceod_group_python3x.sql
+%ceod_group.spark
+%livy.spark
+%livy.sql
+%ceod_group.sql
+%python3x.pyspark
+
+
+
+DS
+
+
+
+GEAVR - Manual
+HUE - Automated
+* s
+
+Zeppelin
+%ceod_group_python3x.pyspark
+
+
+ALMCEOD
+
+
+
+GEAVR -No
+HUE - automated
+fs log directory --- automated
+spark stars -- automated
+zeppelin --- we need to run 
+
+Zeppelin interpreters
+%spark
+%livy.sql
+%spark.sql
+
+
+
+
+
+pip list 
+
+upgrade 
+
+pip3 install packagename==version number
+
+
+
+file save  :wq!
+Quit :q!
+
+
+
+
+======================================================================================
+NSG's:
+
+APP_GE001000000_EMR_DSNONPROD
+APP_GE001000000_EMR_DSPROD
+
+
+NIX ID's:  
+
+CT7
+
+CA_AWSENTC_NC_AV_CT7_EMR_PROD
+CA_AWSENTC_NC_AV_CT7_EMR_NP
+
+DS
+CA_AWSENTC_NC_AV_DATASCI_EMR_NP
+CA_AWSENTC_NC_AV_DATASCI_EMR_PROD
+
+ldp almceod:
+CA_AWSENTC_NC_LDP_NONPROD_L3
+CA_AWSENTC_NC_LDP_PROD_L3
+
+ldp:
+CA_AWSENTC_NC_LDP_NONPROD_L3
+CA_AWSENTC_NC_LDP_PROD_L3
+
+Stromline:
+CA_AWSENTC_NC_AV_STORMLN_EMR_NP
+CA_AWSENTC_NC_AV_STORMLN_EMR_PROD
+
+Below are the DL's for Console access:
+
+ct7 np:
+av-bu-ct7-l2-ops_958262988361    - DL group For L2 Team
+ 
+av-bu-ct7-l3-ops_958262988361    - DL group For L3 Team
+ 
+ct7 prod:
+av-bu-ct7-l2-ops_390070096525    - DL group For L2 Team
+ 
+av-bu-ct7-l3-ops_390070096525    - DL group For L3 Team
+
+ds np:
+av-bu-datasci-l2-ops_958262988361    - DL group For L2 Team
+ 
+av-bu-datasci-l3-ops_958262988361    - DL group For L3 Team
+
+av-bu-datasci-dev_958262988361
+
+ds prod:
+av-bu-datasci-l2-ops_390070096525    - DL group For L2 Team
+ 
+av-bu-datasci-l3-ops_390070096525    - DL group For L3 Team
+
+
+ldp almceod NP:
+av-bu-ldp-l2-ops_958262988361    - DL group For L2 Team
+ 
+av-bu-ldp-l3-ops_958262988361    - DL group For L3 Team
+
+av-bu-ldp-dev_958262988361    dev role
+
+ldp almceod prod:
+av-bu-ldp-l2-ops_390070096525    - DL group For L2 Team
+ 
+av-bu-ldp-l3-ops_390070096525    - DL group For L3 Team
+
+ldp np:
+av-bu-ldp-l2-ops_958262988361    - DL group For L2 Team
+ 
+av-bu-ldp-l3-ops_958262988361    - DL group For L3 Team
+
+av-bu-ldp-dev_958262988361  dev role
+
+
+Shoreline:
+av-bu-shoreline-l3-ops_2793-3796-4555 --- prod
+
+av-bu-shoreline-dev_2794-9782-3229 --- non prod
+
+Stromline:
+av-bu-stormline-dev_958262988361 --- np
+
+av-bu-stormline-l2-ops_390070096525 ---prod
+
+===============================================================================================================================
+Git hub link 
+
+https://github.build.ge.com/AviationDAAS/emr-platform
+
+Cluster build AWS CLI commands
+===============================================================================================================================
+
+- aws cli command
+
+gossamer3 configure
+Config name = default
+Please choose a provider = Ping
+Please choose an MFA = None
+AWS Profile = default
+URL  = https://fssfed.ge.com/fss
+AWS URN = urn:amazon:webservices:mfa-extended
+Username = <your sso id>
+Password = <your sso password>
+Confirm = <your sso password>
+
+
+
+
+set HTTPS_PROXY=http://pitc-zscaler-aspac-bangalore3pr.proxy.corporate.ge.com:80
+gossamer3  -a default bulk-login .gossamer3_roles.yml --aws-urn=urn:amazon:webservices:mfa
+
+gossamer3 login -a default
+
+
+Datasci 
+
+aws --no-verify-ssl cloudformation deploy --stack-name datasci-cluster6-v18-emr-cicd --template-file av-cicd-pipeline-master_v2.yaml --parameter-overrides ApplicationPrefix=datasci GitHubURL=https://github.build.ge.com/AviationDAAS/emr-platform TeamDistributionList=503288832@ge.com KMSKey=arn:aws:kms:us-east-1:958262988361:key/7900f70a-f9bc-4e2d-839a-0813fb11fb29 TemplateConfig=true GitBranch=datasci-graviton TemplateConfigFile=datasci-cluster-6-params.json BuildSpec=buildspec_v2.yaml ProdConditional=true S3FilesProd=true S3FilesProdCustomPrefix=emr/bootstrap Template=template-v2.yaml ChangeSets=true DashBoardStageConditional=true DashBoardProdConditional=true --s3-bucket med-av-daas-preprod-datasci-cicd --s3-prefix Datasci-cicd-template --profile 958262988361/av-bu-datasci-dev
+
+
+
+Ds tags parameters overrides command
+
+aws --no-verify-ssl cloudformation deploy --stack-name datasci-tags-alarms-testing --template-file av-cicd-pipeline-master_v2.yaml --parameter-overrides ApplicationPrefix=datasci UAI=UAI3038827 env=datasci-dev Name=datasci-6.6.0 product=datasci GitHubURL=https://github.build.ge.com/AviationDAAS/emr-platform
+TeamDistributionList=503335896@ge.com KMSKey=arn:aws:kms:us-east-1:958262988361:key/7900f70a-f9bc-4e2d-839a-0813fb11fb29 TemplateConfig=true GitBranch=datasci-tags-alarms-testing TemplateConfigFile=datasci-cluster-6-params.json BuildSpec=buildspec_v2.yaml ProdConditional=false S3FilesProd=false S3FilesProdCustomPrefix=emr/bootstrap Template=template-v2.yaml ChangeSets=true DashBoardStageConditional=true DashBoardProdConditional=false --s3-bucket med-av-daas-preprod-datasci-cicd --s3-prefix Datasci-cicd-template --profile 958262988361/av-bu-datasci-dev
+
+
+
+LDP
+
+
+
+aws --no-verify-ssl cloudformation deploy --stack-name ldp-cluster-t26-emr-cicd-pipeline --template-file av-cicd-pipeline-master_v2.yml --parameter-overrides ApplicationPrefix=ldp GitHubURL=https://github.build.ge.com/AviationDAAS/emr-platform TeamDistributionList=503288832@ge.com KMSKey=arn:aws:kms:us-east-1:958262988361:key/7b30e55f-5e71-4a4c-a451-11d4bc44fa56 TemplateConfig=true GitBranch=main TemplateConfigFile=ldp-params.json BuildSpec=buildspec_v2.yaml ProdConditional=true S3FilesProd=true S3FilesProdCustomPrefix=emr/bootstrap Template=template-v2.yaml ChangeSets=true DashBoardStageConditional=true DashBoardProdConditional=true --s3-bucket med-av-daas-preprod-ldp-cicd --s3-prefix ldp-cicd-template --profile 958262988361/av-bu-ldp-dev
+
+
+
+LDP-Almceod
+
+
+
+aws --no-verify-ssl cloudformation deploy --stack-name <stackName> --template-file av-cicd-pipeline-master_v2.yml --parameter-overrides ApplicationPrefix=ldp GitHubURL=https://github.build.ge.com/AviationDAAS/emr-platform TeamDistributionList=503288832@ge.com KMSKey=arn:aws:kms:us-east-1:958262988361:key/7b30e55f-5e71-4a4c-a451-11d4bc44fa56 TemplateConfig=true GitBranch=main TemplateConfigFile=ldp-almceod-params.json BuildSpec=buildspec_v2.yaml ProdConditional=true S3FilesProd=true S3FilesProdCustomPrefix=emr/bootstrap Template=template-v2.yaml ChangeSets=true DashBoardStageConditional=true DashBoardProdConditional=true --s3-bucket med-av-daas-preprod-ldp-cicd --s3-prefix ldpalmceod-cicd-template --profile 958262988361/av-bu-ldp-dev
+
+
+
+CT7
+
+
+
+aws --no-verify-ssl cloudformation deploy --stack-name ct7-cluster6-ami-test --template-file av-cicd-pipeline-master_v2.yml --parameter-overrides ApplicationPrefix=ct7 GitHubURL=https://github.build.ge.com/AviationDAAS/emr-platform TeamDistributionList=503288832@ge.com KMSKey=arn:aws:kms:us-east-1:958262988361:key/ae27fdb0-0725-405d-b4c6-d5c45ea425bd TemplateConfig=true GitBranch=ct7-graviton TemplateConfigFile=ct7-cluster-6-params.json BuildSpec=buildspec_v2.yaml ProdConditional=true S3FilesProd=true S3FilesProdCustomPrefix=emr/bootstrap Template=template-v2.yaml ChangeSets=true DashBoardStageConditional=true DashBoardProdConditional=true --s3-bucket med-av-daas-preprod-ct7-cicd --s3-prefix ct7-cicd-template --profile 958262988361/av-bu-ct7-dev
+
+=======================================================================================================================================================================
+
+
+=======================================================================================================================================================================
+Red shift
+================================================================================================================================================
+GEKB2027307---short description
+GEKB2027382----access request
+GEKB2027737--data copy
+GEKB2027822----schema creation 
+GEKB2031485----incident creation
+GEKB2031486----service request creation
+GEKB2031618-----permission denied for schema and relation's in Redshift
+GEKB2031642----AWS Redshift Monitoring activities
+GEKB2031617-----How to raise access to redshift through IDM 
+GEKB2031616-----Password reset process in redshift
+GEKB2031623-----Aurora federated schema creation process
+GEKB2031631-----Dbeaver set up for redshift
+GEKB2031737-----Change request creation
+
+
+
+
+===================================================================================================
+
+
+Hue
+
+ 
+
+cd /etc/hue/conf
+ls -ltrh
+vi hue.ini
+
+ 
+
+#### open the hue.ini file and search for bindpassword then edit the bindpassword with new password and save the file.
+
+ 
+
+now restart the hue service
+
+ 
+
+systemctl status hue.service
+systemctl restart  hue.service
+systemctl status hue.service
+
+ 
+
+ 
+
+Now try to connect to hue.
+=================================================================================================================
+
+zeppelin
+
+cd /etc/zeppelin/conf
+
+ 
+
+take backup up of shiorini file
+
+	cp -p shiro.ini shiro.ini_bkp
+
+ 
+run new jceks file
+
+	hadoop credential create ldapRealm.systempassword -provider jceks://file/etc/zeppelin/conf/zeppelin2.jceks
+
+ 
+
+give the password
+
+ 
+
+S3cur1ty
+
+  
+
+Open and edit the shironi.ini file and comment the old jceks and add the newly created file below that
+
+ 
+
+after that give the permissions to that new jceks file and change the owner
+
+ 
+	chmod 644 zeppelin1.jceks
+
+ 
+
+	chown zeppelin:zeppelin zeppelin1.jceks
+
+
+now restart the zeppelin service.
+
+
+
+
+
+==============================================================================================================================================================================================================================================================================================================
+
+shiro.ini:need to change in (github)
+==================
+ldapRealm.contextFactory.url=ldaps://aerospace.vds.corporate.ge.com:636
+ldapRealm.hadoopSecurityCredentialPath=jceks://file/etc/zeppelin/conf/zeppelin1.jceks
+ldapRealm.searchBase=dc=ge,dc=com
+ldapRealm.userSearchBase=dc=ge,dc=com
+ldapRealm.groupSearchBase=dc=ge,dc=com
+ldapRealm.userSearchFilter= (&(objectclass=user)(cn={0}*)(memberOf=CN=APP_GE001000000_EMR_DSNONPROD,OU=Managed,OU=Groups,OU=Enterprise,dc=logon,dc=ds,dc=ge,dc=com))
+ 
+#ldapRealm.userSearchFilter= (&(objectclass=user)(cn={0})(memberOf=cn=APP_GE001000000_EMR_DSNONPROD,OU=Managed,OU=Groups,ou=enterprise,dc=vds,dc=logon))
+=================================================================================================================================================================================================================================================================================================================
+need to rename the shiro.ini(original file)as shiro.ini_bkp and shiro_1.ini to shiro.ini in s3 location(med-av-daas-preprod-datasci-cicd/emr/bootstrap/)
+
+===================================================================================
+Changes in datasci-SecondaryBAScript_graviton.sh file 
+ 
+# Zeppelin configs
+ 
+need to take the back up of shiro.ini and copy the shiro_1.ini file content to shiro.ini
+ 
+after that comment (aws s3 cp s3://"med-av-daas-"$env-$nameU"-cicd"/emr/bootstrap/shiro_1.ini /etc/zeppelin/conf/shiro.ini) this line
+ 
+uncomment this line (aws s3 cp s3://"med-av-daas-"$env-$nameU"-cicd"/emr/bootstrap/shiro.ini .)
+
+#aws s3 cp s3://"med-av-daas-"$env-$nameU"-cicd"/emr/bootstrap/shiro.ini .
+aws s3 cp s3://"med-av-daas-"$env-$nameU"-cicd"/emr/bootstrap/shiro_1.ini /etc/zeppelin/conf/shiro.ini
+
+
+
+After that add below lines in secondary BA script
+
+##### hue configs #####  
+
+cd /var/lib/hue/
+aws s3 cp s3://"med-av-daas-"$env-$nameU"-cicd"/emr/bootstrap/hue_password.sh .
+sleep 5;
+sudo systemctl stop hue.service
+sleep 5;
+sudo systemctl start hue.service
+ 
+ 
+==========================================================================
+ 
+HUE password encryption script: completed(uploaded in s3 --- med-av-daas-preprod-datasci-cicd/emr/bootstrap/hue_password.sh)
+ 
+			
+
+#!/bin/bash
+ 
+SERVICE=$1
+ 
+huepass=`aws --region=us-east-1 ssm get-parameter --name "/datasci/emr/hue-password" --with-decryption --output text --query Parameter.Value`
+ 
+#echo $huepass
+ 
+if [[ ${SERVICE} == "ldap_password" ]]
+ 
+then
+ 
+echo $huepass
+ 
+fi
+
+
+
+ 
+
+=================================================================================
+Removed bind_password config and added bind_password_script config in properties.json file
+ 
+add bind_password_script="/var/lib/hue/hue_passwords.sh ldap_password" in properties.json file line 233
+ 
+	"bind_password_script": "/var/lib/hue/hue_passwords.sh ldap_password"
+
+
+
+
+
+
+
+
+
+
+
+===================================================================================================================================================================================================================================================================================================================
+follow below commands:
+
+---------------------------------------
+
+git clone giturl
+
+dir
+
+cd folder
+
+git status (fatal:not a git means)
+
+git init
+
+git status
+ 
+To list all the branch after cloning
+
+
+git branch branch_name  ---- to create branch
+
+git push remote url(https://github.com/gamidirakesh/AWS-CFT.git) branch_name  ---- to push the branch to git hub
+
+
+------------------------------------------
+ 
+git branch -a
+ 
+To clone only particular branch
+
+----------------------------------
+ 
+git clone --branch <branchname> <remote-repo-url>
+ 
+Git  repo structure command in local:
+
+-------------------------------------
+
+got to that folder and use below command
+ 
+tree /F
+
+git hidden branches command
+
+-------------------------------
+
+git branch -a
+ 
+Git fetch all tags
+
+----------------------
+
+git fetch --tags
+ 
+https://devopscube.com/checkout-clone-git-tags/
+ 
+to check git commits:
+
+-------------------------------
+
+git log --oneline
+ 
+to reset commits:
+
+----------------
+ 
+git reset commitid
+ 
+after git rest need to push to branch
+ 
+to delete tags in gitrepo:
+
+------------------------
+
+git push origin --delete $(git tag -l)
+ 
+To delete local tags:
+
+---------------------------
+ 
+git tag -d $(git tag -l)
+ 
+To push tags:
+
+--------------
+
+git push --tags
+ 
+to delete any branch in git:
+
+-----------------------------
+
+git push origin -d main
+ 
+or
+
+git push origin --delete <branch>    
+
+ 
+ 
