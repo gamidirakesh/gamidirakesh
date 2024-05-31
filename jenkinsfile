@@ -1,9 +1,27 @@
 pipeline {
     agent any
 
-   
-
     stages {
+        stage(scm){
+            steps{
+                git 'https://github.com/sriison/spring-petclinic.git'
+            }
+        }
+        stage(build){
+            steps{
+                sh '''
+                mvn clean package
+                '''
+            }
+        }
+
+        stage(imagebuild){
+            steps{
+                sh '''
+                sudo docker build -t Rakesh-test .
+                '''
+            }
+        }
         stage('Testing') {
             steps {
                 echo 'Hi Welcome to Pipeline Job Example'
@@ -12,6 +30,7 @@ pipeline {
                 echo "The node name is ${env.NODE_NAME}"
             }
         }
+        
         stage('Deploy') {
             steps {
                 echo 'Hi Welcome to Pipeline Job Example'
