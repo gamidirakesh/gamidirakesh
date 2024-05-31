@@ -7,14 +7,6 @@ pipeline {
                 git 'https://github.com/sriison/spring-petclinic.git'
             }
         }
-        stage(build){
-            steps{
-                sh '''
-                mvn clean package
-                '''
-            }
-        }
-
         stage(imagebuild){
             steps{
                 sh '''
