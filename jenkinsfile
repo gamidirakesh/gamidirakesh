@@ -28,7 +28,7 @@ pipeline {
         stage(imagebuild){
             steps{
                 sh '''
-                sudo docker build -t Rakesh-test .
+                docker build -t Rakesh-test .
                 '''
             }
         }
