@@ -1,43 +1,24 @@
 pipeline {
     agent any
-
-    stages {
-        stage(scm){
-            steps{
-                git 'https://github.com/sriison/spring-petclinic.git'
-            }
-        }
-
-        stage('Testing') {
-            steps {
-                echo 'Hi Welcome to Pipeline Job Example'
-                echo "the job name is ${env.JOB_NAME}"
-                echo "the build number is ${env.BUILD_NUMBER}"
-                echo "The node name is ${env.NODE_NAME}"
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                echo 'Hi Welcome to Pipeline Job Example'
-                echo "the job name is ${env.JOB_NAME}"
-                echo "the build number is ${env.BUILD_NUMBER}"
-                echo "The node name is ${env.NODE_NAME}"
-            }
-        }
-        stage(imagebuild){
-            steps{
-                sh '''
-                docker build -t Rakesh-test .
-                '''
-            }
-        }
+    environment {
+        JAVA_HOME = '/usr/lib/jvm/java-17-amazon-corretto.x86_64/'
+        PATH = "$JAVA_HOME/bin:$PATH"
     }
-    post
-    {
-        always
-        {
-            emailext body: 'Build started on echo $date', subject: 'Build started on echo $date', to: 'gamidirakhi@gmail.com'
+    stages {
+        stage('SCM Checkout') {
+            steps {
+                git 'https://github.com/gamidirakesh/gamidirakesh.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean install -DskipTests=true'
+            }
+        }
+        stage('Image Build') {
+            steps {
+                sh 'sudo docker build -t Rakesh-test .'
+            }
         }
     }
 }
